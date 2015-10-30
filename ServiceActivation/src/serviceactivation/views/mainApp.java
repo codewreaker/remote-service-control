@@ -5,6 +5,9 @@
  */
 package serviceactivation.views;
 
+import javax.swing.JButton;
+import javax.swing.JRadioButton;
+
 /**
  *
  * @author israelagyeman-prempeh
@@ -27,31 +30,192 @@ public class mainApp extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jToggleButton1 = new javax.swing.JToggleButton();
+        serviceOne = new javax.swing.JLabel();
+        serviceOneRadio = new javax.swing.JRadioButton();
+        serviceTwo = new javax.swing.JLabel();
+        serviceTwoRadio = new javax.swing.JRadioButton();
+        serviceThreeRadio = new javax.swing.JRadioButton();
+        serviceThree = new javax.swing.JLabel();
+        serviceFourRadio = new javax.swing.JRadioButton();
+        serviceFour = new javax.swing.JLabel();
+        serviceFiveRadio = new javax.swing.JRadioButton();
+        serviceFive = new javax.swing.JLabel();
+        serviceOneStart = new javax.swing.JButton();
+        serviceOneStop = new javax.swing.JButton();
+        serviceOneLog = new javax.swing.JButton();
+        serviceTwoStart = new javax.swing.JButton();
+        serviceTwoStop = new javax.swing.JButton();
+        serviceTwoLog = new javax.swing.JButton();
+        serviceThreeStart = new javax.swing.JButton();
+        serviceThreeStop = new javax.swing.JButton();
+        serviceThreeLog = new javax.swing.JButton();
+        serviceFourStart = new javax.swing.JButton();
+        serviceFourStop = new javax.swing.JButton();
+        serviceFourLog = new javax.swing.JButton();
+        serviceFiveStart = new javax.swing.JButton();
+        serviceFiveStop = new javax.swing.JButton();
+        serviceFiveLog = new javax.swing.JButton();
+        bgOne = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(42, 50, 61));
+        setMaximumSize(new java.awt.Dimension(600, 520));
+        setMinimumSize(new java.awt.Dimension(600, 520));
+        setPreferredSize(new java.awt.Dimension(600, 500));
+        setSize(new java.awt.Dimension(600, 500));
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jToggleButton1.setText("jToggleButton1");
+        serviceOne.setBackground(new java.awt.Color(42, 50, 61));
+        serviceOne.setForeground(new java.awt.Color(42, 50, 61));
+        serviceOne.setText("Service One");
+        getContentPane().add(serviceOne, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 70, 260, 30));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(61, 61, 61)
-                .addComponent(jToggleButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 287, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(52, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(75, 75, 75)
-                .addComponent(jToggleButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(115, Short.MAX_VALUE))
-        );
+        serviceOneRadio.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                serviceOneRadioActionPerformed(evt);
+            }
+        });
+        getContentPane().add(serviceOneRadio, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 70, -1, 30));
+
+        serviceTwo.setBackground(new java.awt.Color(42, 50, 61));
+        serviceTwo.setForeground(new java.awt.Color(42, 50, 61));
+        serviceTwo.setText("Service Two");
+        getContentPane().add(serviceTwo, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 150, 250, 30));
+
+        serviceTwoRadio.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                serviceTwoRadioActionPerformed(evt);
+            }
+        });
+        getContentPane().add(serviceTwoRadio, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 150, -1, 30));
+
+        serviceThreeRadio.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                serviceThreeRadioActionPerformed(evt);
+            }
+        });
+        getContentPane().add(serviceThreeRadio, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 230, -1, 40));
+
+        serviceThree.setBackground(new java.awt.Color(42, 50, 61));
+        serviceThree.setForeground(new java.awt.Color(42, 50, 61));
+        serviceThree.setText("Service Three");
+        getContentPane().add(serviceThree, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 230, 260, 40));
+
+        serviceFourRadio.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                serviceFourRadioActionPerformed(evt);
+            }
+        });
+        getContentPane().add(serviceFourRadio, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 310, -1, 40));
+
+        serviceFour.setBackground(new java.awt.Color(42, 50, 61));
+        serviceFour.setForeground(new java.awt.Color(42, 50, 61));
+        serviceFour.setText("Service Four");
+        getContentPane().add(serviceFour, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 310, 260, 40));
+
+        serviceFiveRadio.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                serviceFiveRadioActionPerformed(evt);
+            }
+        });
+        getContentPane().add(serviceFiveRadio, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 400, -1, 30));
+
+        serviceFive.setBackground(new java.awt.Color(42, 50, 61));
+        serviceFive.setForeground(new java.awt.Color(42, 50, 61));
+        serviceFive.setText("Service Five");
+        getContentPane().add(serviceFive, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 400, 260, 30));
+
+        serviceOneStart.setBackground(new java.awt.Color(61, 181, 145));
+        serviceOneStart.setText("START");
+        getContentPane().add(serviceOneStart, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 70, 70, -1));
+
+        serviceOneStop.setBackground(new java.awt.Color(240, 92, 85));
+        serviceOneStop.setText("STOP");
+        getContentPane().add(serviceOneStop, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 70, -1, -1));
+
+        serviceOneLog.setBackground(new java.awt.Color(222, 226, 230));
+        serviceOneLog.setForeground(new java.awt.Color(0, 0, 0));
+        serviceOneLog.setText("LOG");
+        getContentPane().add(serviceOneLog, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 70, -1, -1));
+
+        serviceTwoStart.setBackground(new java.awt.Color(61, 181, 145));
+        serviceTwoStart.setText("START");
+        getContentPane().add(serviceTwoStart, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 160, 70, -1));
+
+        serviceTwoStop.setBackground(new java.awt.Color(240, 92, 85));
+        serviceTwoStop.setText("STOP");
+        getContentPane().add(serviceTwoStop, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 160, -1, -1));
+
+        serviceTwoLog.setBackground(new java.awt.Color(222, 226, 230));
+        serviceTwoLog.setForeground(new java.awt.Color(0, 0, 0));
+        serviceTwoLog.setText("LOG");
+        getContentPane().add(serviceTwoLog, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 160, -1, -1));
+
+        serviceThreeStart.setBackground(new java.awt.Color(61, 181, 145));
+        serviceThreeStart.setText("START");
+        getContentPane().add(serviceThreeStart, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 240, 70, -1));
+
+        serviceThreeStop.setBackground(new java.awt.Color(240, 92, 85));
+        serviceThreeStop.setText("STOP");
+        getContentPane().add(serviceThreeStop, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 240, -1, -1));
+
+        serviceThreeLog.setBackground(new java.awt.Color(222, 226, 230));
+        serviceThreeLog.setForeground(new java.awt.Color(0, 0, 0));
+        serviceThreeLog.setText("LOG");
+        getContentPane().add(serviceThreeLog, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 240, -1, -1));
+
+        serviceFourStart.setBackground(new java.awt.Color(61, 181, 145));
+        serviceFourStart.setText("START");
+        getContentPane().add(serviceFourStart, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 320, 70, -1));
+
+        serviceFourStop.setBackground(new java.awt.Color(240, 92, 85));
+        serviceFourStop.setText("STOP");
+        getContentPane().add(serviceFourStop, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 320, -1, -1));
+
+        serviceFourLog.setBackground(new java.awt.Color(222, 226, 230));
+        serviceFourLog.setForeground(new java.awt.Color(0, 0, 0));
+        serviceFourLog.setText("LOG");
+        getContentPane().add(serviceFourLog, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 320, -1, -1));
+
+        serviceFiveStart.setBackground(new java.awt.Color(61, 181, 145));
+        serviceFiveStart.setText("START");
+        getContentPane().add(serviceFiveStart, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 410, 70, -1));
+
+        serviceFiveStop.setBackground(new java.awt.Color(240, 92, 85));
+        serviceFiveStop.setText("STOP");
+        getContentPane().add(serviceFiveStop, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 410, -1, -1));
+
+        serviceFiveLog.setBackground(new java.awt.Color(222, 226, 230));
+        serviceFiveLog.setForeground(new java.awt.Color(0, 0, 0));
+        serviceFiveLog.setText("LOG");
+        getContentPane().add(serviceFiveLog, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 410, -1, -1));
+
+        bgOne.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/bg-01.png"))); // NOI18N
+        bgOne.setText("bg-1");
+        getContentPane().add(bgOne, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 600, 500));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void serviceOneRadioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_serviceOneRadioActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_serviceOneRadioActionPerformed
+
+    private void serviceTwoRadioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_serviceTwoRadioActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_serviceTwoRadioActionPerformed
+
+    private void serviceThreeRadioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_serviceThreeRadioActionPerformed
+        // TODO add your handling code here
+    }//GEN-LAST:event_serviceThreeRadioActionPerformed
+
+    private void serviceFourRadioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_serviceFourRadioActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_serviceFourRadioActionPerformed
+
+    private void serviceFiveRadioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_serviceFiveRadioActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_serviceFiveRadioActionPerformed
 
     /**
      * @param args the command line arguments
@@ -87,8 +251,194 @@ public class mainApp extends javax.swing.JFrame {
             }
         });
     }
+    
+    /**
+     * @return JRadioButton
+     * returns the radio button of the first service, to allow it to be set as running or not
+     */
+    public JRadioButton radioOne(){
+        return serviceOneRadio;
+    }
+    
+    /**
+     * @return JRadioButton
+     * returns the radio button of the second service, to allow it to be set as running or not
+     */
+    public JRadioButton radioTwo(){
+        return serviceTwoRadio;
+    }
+    
+    /**
+     * @return JRadioButton
+     * returns the radio button of the third service, to allow it to be set as running or not
+     */
+    public JRadioButton radioThree(){
+        return serviceThreeRadio;
+    }
+    
+     /**
+     * @return JRadioButton
+     * returns the radio button of the fourth service, to allow it to be set as running or not
+     */
+    public JRadioButton radioFour(){
+        return serviceFourRadio;
+    }
+    
+     /**
+     * @return JRadioButton
+     * returns the radio button of the Fifth service, to allow it to be set as running or not
+     */
+    public JRadioButton radioive(){
+        return serviceFiveRadio;
+    }
+    
+    /**
+     * @return JButton
+     * returns start button of service one
+     */
+    public JButton serviceOneStart(){
+        return serviceOneStart;
+    }
+    
+    /**
+     * @return JButton
+     * returns stop button of service one
+     */
+    public JButton serviceOneStop(){
+        return serviceOneStop;
+    }
+    
+    /**
+     * @return JButton
+     * returns log button of service one
+     */
+    public JButton serviceOneLog(){
+        return serviceOneLog;
+    }
+    
+    /**
+     * @return JButton
+     * returns start button of service one
+     */
+    public JButton serviceTwoStart(){
+        return serviceTwoStart;
+    }
+    
+    /**
+     * @return JButton
+     * returns stop button of service one
+     */
+    public JButton serviceTwoStop(){
+        return serviceTwoStop;
+    }
+    
+    /**
+     * @return JButton
+     * returns log button of service one
+     */
+    public JButton serviceTwoLog(){
+        return serviceTwoLog;
+    }
+    
+    /**
+     * @return JButton
+     * returns start button of service one
+     */
+    public JButton serviceThreeStart(){
+        return serviceThreeStart;
+    }
+    
+    /**
+     * @return JButton
+     * returns stop button of service one
+     */
+    public JButton serviceThreeStop(){
+        return serviceThreeStop;
+    }
+    
+    /**
+     * @return JButton
+     * returns log button of service one
+     */
+    public JButton serviceThreeLog(){
+        return serviceThreeLog;
+    }
+    
+    /**
+     * @return JButton
+     * returns start button of service one
+     */
+    public JButton serviceFourStart(){
+        return serviceFourStart;
+    }
+    
+    /**
+     * @return JButton
+     * returns stop button of service one
+     */
+    public JButton serviceFourStop(){
+        return serviceFourStop;
+    }
+    
+    /**
+     * @return JButton
+     * returns log button of service one
+     */
+    public JButton serviceFourLog(){
+        return serviceFourLog;
+    }
+    
+    /**
+     * @return JButton
+     * returns start button of service one
+     */
+    public JButton serviceFiveStart(){
+        return serviceFiveStart;
+    }
+    
+    /**
+     * @return JButton
+     * returns stop button of service one
+     */
+    public JButton serviceFiveStop(){
+        return serviceFiveStop;
+    }
+    
+    /**
+     * @return JButton
+     * returns log button of service one
+     */
+    public JButton serviceFiveLog(){
+        return serviceFiveLog;
+    }
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JToggleButton jToggleButton1;
+    private javax.swing.JLabel bgOne;
+    private javax.swing.JLabel serviceFive;
+    private javax.swing.JButton serviceFiveLog;
+    private javax.swing.JRadioButton serviceFiveRadio;
+    private javax.swing.JButton serviceFiveStart;
+    private javax.swing.JButton serviceFiveStop;
+    private javax.swing.JLabel serviceFour;
+    private javax.swing.JButton serviceFourLog;
+    private javax.swing.JRadioButton serviceFourRadio;
+    private javax.swing.JButton serviceFourStart;
+    private javax.swing.JButton serviceFourStop;
+    private javax.swing.JLabel serviceOne;
+    private javax.swing.JButton serviceOneLog;
+    private javax.swing.JRadioButton serviceOneRadio;
+    private javax.swing.JButton serviceOneStart;
+    private javax.swing.JButton serviceOneStop;
+    private javax.swing.JLabel serviceThree;
+    private javax.swing.JButton serviceThreeLog;
+    private javax.swing.JRadioButton serviceThreeRadio;
+    private javax.swing.JButton serviceThreeStart;
+    private javax.swing.JButton serviceThreeStop;
+    private javax.swing.JLabel serviceTwo;
+    private javax.swing.JButton serviceTwoLog;
+    private javax.swing.JRadioButton serviceTwoRadio;
+    private javax.swing.JButton serviceTwoStart;
+    private javax.swing.JButton serviceTwoStop;
     // End of variables declaration//GEN-END:variables
 }
