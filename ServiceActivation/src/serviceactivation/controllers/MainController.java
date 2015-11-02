@@ -46,6 +46,7 @@ public class MainController {
             @Override
             public void mouseClicked(MouseEvent e) {
                 if(e.getSource() == mv.serviceOneStart()){
+                    System.out.println(m.connect());
                     //do something
                     mv.labelOne().setBackground(Color.green);
                 }else if(e.getSource() == mv.serviceOneStop()){
@@ -76,6 +77,7 @@ public class MainController {
                     //do something
                     mv.labelFour().setBackground(Color.red);
                 }else if(e.getSource() == mv.serviceFourLog()){
+                    System.out.println("Explanation");
                     //do something
                 }else if(e.getSource() == mv.serviceFiveStart()){
                     //do something

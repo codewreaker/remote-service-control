@@ -15,8 +15,8 @@ public class Models {
     /**
      * A sample function that returns a String saying prophet is awesome
     */
-    public String sayTheObvious(){
-        return "Prophet is awesome";
+    public boolean connect(){
+        return true;
     }
     
 }

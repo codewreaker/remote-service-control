@@ -65,7 +65,6 @@ public class MainView extends javax.swing.JFrame {
         setBackground(new java.awt.Color(42, 50, 61));
         setMaximumSize(new java.awt.Dimension(600, 520));
         setMinimumSize(new java.awt.Dimension(600, 520));
-        setPreferredSize(new java.awt.Dimension(600, 500));
         setSize(new java.awt.Dimension(600, 500));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
