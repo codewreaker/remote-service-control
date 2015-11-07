@@ -7,6 +7,8 @@ package serviceactivation.views;
 
 import javax.swing.JButton;
 import javax.swing.JTextField;
+import java.net.*;
+import java.io.*;
 
 
 /**
@@ -16,7 +18,7 @@ import javax.swing.JTextField;
 public class ConnectView extends javax.swing.JFrame {
     
     ConnectView newConnectView;
-
+    Socket sock;
     /**
      * Creates new form ConnectView
      */
@@ -50,11 +52,26 @@ public class ConnectView extends javax.swing.JFrame {
         hostIp.setBackground(new java.awt.Color(222, 226, 230));
         hostIp.setForeground(new java.awt.Color(42, 60, 51));
         hostIp.setBorder(null);
+        hostIp.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                hostIpActionPerformed(evt);
+            }
+        });
         getContentPane().add(hostIp, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 60, 210, 30));
 
         port.setBackground(new java.awt.Color(222, 223, 230));
         port.setForeground(new java.awt.Color(42, 61, 51));
         port.setBorder(null);
+        port.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                portActionPerformed(evt);
+            }
+        });
+        port.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                portKeyTyped(evt);
+            }
+        });
         getContentPane().add(port, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 120, 60, 20));
 
         connectionName.setBackground(new java.awt.Color(222, 226, 230));
@@ -63,9 +80,19 @@ public class ConnectView extends javax.swing.JFrame {
         getContentPane().add(connectionName, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 170, 130, 30));
 
         newConnection.setText("NEW CONNECTION");
+        newConnection.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                newConnectionActionPerformed(evt);
+            }
+        });
         getContentPane().add(newConnection, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 60, 160, 30));
 
         connect.setText("CONNECT");
+        connect.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                connectActionPerformed(evt);
+            }
+        });
         getContentPane().add(connect, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 120, 160, 30));
 
         cancelConnection.setText("CANCEL");
@@ -87,8 +114,43 @@ public class ConnectView extends javax.swing.JFrame {
 
     private void cancelConnectionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelConnectionActionPerformed
         // TODO add your handling code here:
+//        try{
+//            sock.close();
+//        }catch(IOException ioe){System.err.println("Done");}
         
     }//GEN-LAST:event_cancelConnectionActionPerformed
+
+    private void connectActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_connectActionPerformed
+        // TODO add your handling code here:
+        try{
+            sock = new Socket(hostIp.getText(),Integer.parseInt(port.getText()));
+        }catch(IOException ioe){System.err.println("Done");}
+    }//GEN-LAST:event_connectActionPerformed
+
+    private void newConnectionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_newConnectionActionPerformed
+        // TODO add your handling code here:
+//        try{
+//            hostIp.setText("");
+//            port.setText("");
+//            sock.close();
+//        }catch(IOException ioe){System.err.println("Done");}
+    }//GEN-LAST:event_newConnectionActionPerformed
+
+    private void hostIpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hostIpActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_hostIpActionPerformed
+
+    private void portActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_portActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_portActionPerformed
+
+    private void portKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_portKeyTyped
+        // TODO add your handling code here:
+        char c = evt.getKeyChar();
+        if(!(Character.isDigit(c))){
+            evt.consume();
+        }
+    }//GEN-LAST:event_portKeyTyped
 
     /**
      * @param args the command line arguments
