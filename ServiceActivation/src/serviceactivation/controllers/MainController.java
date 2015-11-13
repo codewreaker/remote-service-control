@@ -6,6 +6,8 @@
 package serviceactivation.controllers;
 
 import java.awt.Color;
+import java.net.*;
+import java.io.*;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import serviceactivation.models.Models;
@@ -20,6 +22,7 @@ public class MainController {
     ConnectView cv;
     MainView mv;
     Models m;
+    Socket sock;
     MouseListener mouseListener;
     
     /**
@@ -97,7 +100,10 @@ public class MainController {
                     cv.dispose();
                 }else if(e.getSource() == cv.cancel()){
                     //do something
-                    cv.dispose();
+                    try{
+                        sock.close();
+                        cv.dispose();
+                    }catch(IOException ioe){}
                 }
                 
             }

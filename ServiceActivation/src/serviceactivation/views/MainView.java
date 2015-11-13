@@ -102,7 +102,6 @@ public class MainView extends javax.swing.JFrame {
         getContentPane().add(serviceOneStop, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 70, -1, -1));
 
         serviceOneLog.setBackground(new java.awt.Color(222, 226, 230));
-        serviceOneLog.setForeground(new java.awt.Color(0, 0, 0));
         serviceOneLog.setText("LOG");
         getContentPane().add(serviceOneLog, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 70, -1, -1));
 
@@ -115,7 +114,6 @@ public class MainView extends javax.swing.JFrame {
         getContentPane().add(serviceTwoStop, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 160, -1, -1));
 
         serviceTwoLog.setBackground(new java.awt.Color(222, 226, 230));
-        serviceTwoLog.setForeground(new java.awt.Color(0, 0, 0));
         serviceTwoLog.setText("LOG");
         getContentPane().add(serviceTwoLog, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 160, -1, -1));
 
@@ -128,7 +126,6 @@ public class MainView extends javax.swing.JFrame {
         getContentPane().add(serviceThreeStop, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 240, -1, -1));
 
         serviceThreeLog.setBackground(new java.awt.Color(222, 226, 230));
-        serviceThreeLog.setForeground(new java.awt.Color(0, 0, 0));
         serviceThreeLog.setText("LOG");
         getContentPane().add(serviceThreeLog, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 240, -1, -1));
 
@@ -141,7 +138,6 @@ public class MainView extends javax.swing.JFrame {
         getContentPane().add(serviceFourStop, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 320, -1, -1));
 
         serviceFourLog.setBackground(new java.awt.Color(222, 226, 230));
-        serviceFourLog.setForeground(new java.awt.Color(0, 0, 0));
         serviceFourLog.setText("LOG");
         getContentPane().add(serviceFourLog, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 320, -1, -1));
 
@@ -154,11 +150,15 @@ public class MainView extends javax.swing.JFrame {
         getContentPane().add(serviceFiveStop, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 400, -1, -1));
 
         serviceFiveLog.setBackground(new java.awt.Color(222, 226, 230));
-        serviceFiveLog.setForeground(new java.awt.Color(0, 0, 0));
         serviceFiveLog.setText("LOG");
         getContentPane().add(serviceFiveLog, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 400, -1, -1));
 
         newConnection.setText("NEW CONNECTION");
+        newConnection.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                newConnectionActionPerformed(evt);
+            }
+        });
         getContentPane().add(newConnection, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 444, 210, 30));
 
         serviceLabelOne.setBackground(new java.awt.Color(204, 0, 0));
@@ -188,6 +188,10 @@ public class MainView extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void newConnectionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_newConnectionActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_newConnectionActionPerformed
 
     /**
      * @param args the command line arguments
