@@ -32,7 +32,7 @@ public class MainController {
         this.cv = cv;
         this.mv = mv;
         this.m = m;
-        mv.setVisible(true);
+        cv.setVisible(true);
         this.control();
     }
     
@@ -93,7 +93,8 @@ public class MainController {
         /**/    }else if(e.getSource() == cv.newConnection()){
                     //do something
                 }else if(e.getSource() == cv.connectButton()){
-                    //do something
+                    mv.setVisible(true);
+                    cv.dispose();
                 }else if(e.getSource() == cv.cancel()){
                     //do something
                     cv.dispose();
