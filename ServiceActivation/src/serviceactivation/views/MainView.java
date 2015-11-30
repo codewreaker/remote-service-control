@@ -36,7 +36,6 @@ public class MainView extends javax.swing.JFrame {
         serviceTwo = new javax.swing.JLabel();
         serviceThree = new javax.swing.JLabel();
         serviceFour = new javax.swing.JLabel();
-        serviceFive = new javax.swing.JLabel();
         serviceOneStart = new javax.swing.JButton();
         serviceOneStop = new javax.swing.JButton();
         serviceOneLog = new javax.swing.JButton();
@@ -49,9 +48,6 @@ public class MainView extends javax.swing.JFrame {
         serviceFourStart = new javax.swing.JButton();
         serviceFourStop = new javax.swing.JButton();
         serviceFourLog = new javax.swing.JButton();
-        serviceFiveStart = new javax.swing.JButton();
-        serviceFiveStop = new javax.swing.JButton();
-        serviceFiveLog = new javax.swing.JButton();
         newConnection = new javax.swing.JButton();
         serviceLabelOne = new javax.swing.JLabel();
         serviceLabelTwo = new javax.swing.JLabel();
@@ -70,28 +66,23 @@ public class MainView extends javax.swing.JFrame {
 
         serviceOne.setBackground(new java.awt.Color(42, 50, 61));
         serviceOne.setForeground(new java.awt.Color(42, 50, 61));
-        serviceOne.setText("Service One");
+        serviceOne.setText("Audio");
         getContentPane().add(serviceOne, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 70, 260, 30));
 
         serviceTwo.setBackground(new java.awt.Color(42, 50, 61));
         serviceTwo.setForeground(new java.awt.Color(42, 50, 61));
-        serviceTwo.setText("Service Two");
+        serviceTwo.setText("Wifi");
         getContentPane().add(serviceTwo, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 150, 250, 30));
 
         serviceThree.setBackground(new java.awt.Color(42, 50, 61));
         serviceThree.setForeground(new java.awt.Color(42, 50, 61));
-        serviceThree.setText("Service Three");
+        serviceThree.setText("Fire Wall");
         getContentPane().add(serviceThree, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 230, 260, 40));
 
         serviceFour.setBackground(new java.awt.Color(42, 50, 61));
         serviceFour.setForeground(new java.awt.Color(42, 50, 61));
-        serviceFour.setText("Service Four");
+        serviceFour.setText("Windows Update");
         getContentPane().add(serviceFour, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 310, 260, 40));
-
-        serviceFive.setBackground(new java.awt.Color(42, 50, 61));
-        serviceFive.setForeground(new java.awt.Color(42, 50, 61));
-        serviceFive.setText("Service Five");
-        getContentPane().add(serviceFive, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 400, 260, 30));
 
         serviceOneStart.setBackground(new java.awt.Color(61, 181, 145));
         serviceOneStart.setText("START");
@@ -141,20 +132,8 @@ public class MainView extends javax.swing.JFrame {
         serviceFourLog.setText("LOG");
         getContentPane().add(serviceFourLog, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 320, -1, -1));
 
-        serviceFiveStart.setBackground(new java.awt.Color(61, 181, 145));
-        serviceFiveStart.setText("START");
-        getContentPane().add(serviceFiveStart, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 400, 70, -1));
-
-        serviceFiveStop.setBackground(new java.awt.Color(240, 92, 85));
-        serviceFiveStop.setText("STOP");
-        getContentPane().add(serviceFiveStop, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 400, -1, -1));
-
-        serviceFiveLog.setBackground(new java.awt.Color(222, 226, 230));
-        serviceFiveLog.setText("LOG");
-        getContentPane().add(serviceFiveLog, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 400, -1, -1));
-
         newConnection.setText("NEW CONNECTION");
-        getContentPane().add(newConnection, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 444, 210, 30));
+        getContentPane().add(newConnection, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 390, 210, 50));
 
         serviceLabelOne.setBackground(new java.awt.Color(204, 0, 0));
         serviceLabelOne.setForeground(new java.awt.Color(240, 92, 85));
@@ -359,29 +338,7 @@ public class MainView extends javax.swing.JFrame {
         return serviceFourLog;
     }
     
-    /**
-     * @return JButton
-     * returns start button of service one
-     */
-    public JButton serviceFiveStart(){
-        return serviceFiveStart;
-    }
-    
-    /**
-     * @return JButton
-     * returns stop button of service one
-     */
-    public JButton serviceFiveStop(){
-        return serviceFiveStop;
-    }
-    
-    /**
-     * @return JButton
-     * returns log button of service one
-     */
-    public JButton serviceFiveLog(){
-        return serviceFiveLog;
-    }
+   
     
     /**
      * @return JButton
@@ -408,10 +365,6 @@ public class MainView extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel bgOne;
     private javax.swing.JButton newConnection;
-    private javax.swing.JLabel serviceFive;
-    private javax.swing.JButton serviceFiveLog;
-    private javax.swing.JButton serviceFiveStart;
-    private javax.swing.JButton serviceFiveStop;
     private javax.swing.JLabel serviceFour;
     private javax.swing.JButton serviceFourLog;
     private javax.swing.JButton serviceFourStart;
