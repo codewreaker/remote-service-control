@@ -48,33 +48,49 @@ public class MainController {
                 if(e.getSource() == mv.serviceOneStart()){
                     System.out.println(m.connect());
                     //do something
+                    //Starting the audio service
+                    m.startService1();
                     mv.labelOne().setBackground(Color.green);
                 }else if(e.getSource() == mv.serviceOneStop()){
                     //do something
+                    //Stoping the audio service
+                    m.stopService1();
                     mv.labelOne().setBackground(Color.red);
                 }else if(e.getSource() == mv.serviceOneLog()){
                     //do something
                 }else if(e.getSource() == mv.serviceTwoStart()){
                     //do something
+                    //Starting the firewall service
+                    m.startService2();
                     mv.labelTwo().setBackground(Color.green);
                 }else if(e.getSource() == mv.serviceTwoStop()){
                     //do something
+                    //Stoping the firewall service
+                    m.stopService2();
                     mv.labelTwo().setBackground(Color.red);
                 }else if(e.getSource() == mv.serviceTwoLog()){
                     //do something
                 }else if(e.getSource() == mv.serviceThreeStart()){
                     //do something
+                    //Starting the wifi service
+                    m.startService3();
                     mv.labelThree().setBackground(Color.green);
                 }else if(e.getSource() == mv.serviceThreeStop()){
                     //do something
+                    //Stoping the wifi service
+                    m.stopService3();
                     mv.labelThree().setBackground(Color.red);
                 }else if(e.getSource() == mv.serviceThreeLog()){
                     //do something
                 }else if(e.getSource() == mv.serviceFourStart()){
                     //do something
+                    //Start the windows update seervice
+                    m.startService4();
                     mv.labelFour().setBackground(Color.green);
                 }else if(e.getSource() == mv.serviceFourStop()){
                     //do something
+                    //Stoping the windows update service
+                    m.stopService4();
                     mv.labelFour().setBackground(Color.red);
                 }else if(e.getSource() == mv.serviceFourLog()){
                     System.out.println("Explanation");
