@@ -104,14 +104,6 @@ public class MainController {
                 }else if(e.getSource() == mv.serviceFourLog()){
                     System.out.println("Explanation");
                     //do something
-                }else if(e.getSource() == mv.serviceFiveStart()){
-                    //do something
-                    mv.labelFive().setBackground(Color.green);
-                }else if(e.getSource() == mv.serviceFiveStop()){
-                    //do something
-                    mv.labelFive().setBackground(Color.red);
-                }else if(e.getSource() == mv.serviceFiveLog()){
-                    //do something
                 }else if(e.getSource() == mv.newConnectionBtn()){
                     //do something
                     cv.setVisible(true);
@@ -120,10 +112,12 @@ public class MainController {
                  * This function starts a server for others to listen to it
                  */
                 else if(e.getSource() == cv.startServerBtn()){
+                    cv.dispose();
+                    JOptionPane.showMessageDialog(cv, "Close Window To Stop Connection", "Remote Connection", 1);
                     if(m.startServer(Integer.parseInt(cv.getOpenPort().getText()))){
                         JOptionPane.showMessageDialog(cv, "Successfully Created A Network", "Remote Connection", 1);
                     }else{
-                        JOptionPane.showMessageDialog(cv, "Failed to create a service", "Remote Connection", 1);
+                        JOptionPane.showMessageDialog(cv, "Failed to create a Service", "Remote Connection", 1);
                     }
                 }
                 /**
@@ -179,17 +173,14 @@ public class MainController {
         mv.serviceTwoStart().addMouseListener(mouseListener);
         mv.serviceThreeStart().addMouseListener(mouseListener);
         mv.serviceFourStart().addMouseListener(mouseListener);
-        mv.serviceFiveStart().addMouseListener(mouseListener);
         mv.serviceOneStop().addMouseListener(mouseListener);
         mv.serviceTwoStop().addMouseListener(mouseListener);
         mv.serviceThreeStop().addMouseListener(mouseListener);
         mv.serviceFourStop().addMouseListener(mouseListener);
-        mv.serviceFiveStop().addMouseListener(mouseListener);
         mv.serviceOneLog().addMouseListener(mouseListener);
         mv.serviceTwoLog().addMouseListener(mouseListener);
         mv.serviceThreeLog().addMouseListener(mouseListener);
         mv.serviceFourLog().addMouseListener(mouseListener);
-        mv.serviceFiveLog().addMouseListener(mouseListener);
         mv.newConnectionBtn().addMouseListener(mouseListener);
         
         /** adding mouselisteners to elements in connect view **/

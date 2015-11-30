@@ -55,11 +55,10 @@ public class Models {
      * @return 
      */
    public boolean startServer(int port){
-        boolean status = false;
+        boolean status = true;
         try {
             ServerSocket serverSock = new ServerSocket(port);
             while(true){
-                status = true;
                 Socket client = serverSock.accept();
                 PrintWriter pw = new 
                     PrintWriter(client.getOutputStream(),true);
