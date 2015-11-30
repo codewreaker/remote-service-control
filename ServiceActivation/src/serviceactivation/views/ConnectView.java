@@ -35,10 +35,9 @@ public class ConnectView extends javax.swing.JFrame {
 
         hostIp = new javax.swing.JTextField();
         port = new javax.swing.JTextField();
-        connectionName = new javax.swing.JTextField();
-        newConnection = new javax.swing.JButton();
+        portToListenTo = new javax.swing.JTextField();
+        listenBtn = new javax.swing.JButton();
         connect = new javax.swing.JButton();
-        cancelConnection = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
@@ -50,31 +49,23 @@ public class ConnectView extends javax.swing.JFrame {
         hostIp.setBackground(new java.awt.Color(222, 226, 230));
         hostIp.setForeground(new java.awt.Color(42, 60, 51));
         hostIp.setBorder(null);
-        getContentPane().add(hostIp, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 60, 210, 30));
+        getContentPane().add(hostIp, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 90, 350, 30));
 
         port.setBackground(new java.awt.Color(222, 223, 230));
         port.setForeground(new java.awt.Color(42, 61, 51));
         port.setBorder(null);
-        getContentPane().add(port, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 120, 60, 20));
+        getContentPane().add(port, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 140, 150, 40));
 
-        connectionName.setBackground(new java.awt.Color(222, 226, 230));
-        connectionName.setForeground(new java.awt.Color(42, 51, 61));
-        connectionName.setBorder(null);
-        getContentPane().add(connectionName, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 170, 130, 30));
+        portToListenTo.setBackground(new java.awt.Color(222, 223, 230));
+        portToListenTo.setForeground(new java.awt.Color(42, 61, 51));
+        portToListenTo.setBorder(null);
+        getContentPane().add(portToListenTo, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 280, 140, 40));
 
-        newConnection.setText("NEW CONNECTION");
-        getContentPane().add(newConnection, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 60, 160, 30));
+        listenBtn.setText("START SERVER");
+        getContentPane().add(listenBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 290, 210, 30));
 
-        connect.setText("CONNECT");
-        getContentPane().add(connect, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 120, 160, 30));
-
-        cancelConnection.setText("CANCEL");
-        cancelConnection.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cancelConnectionActionPerformed(evt);
-            }
-        });
-        getContentPane().add(cancelConnection, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 180, 160, 30));
+        connect.setText("CONNECT TO REMOTE");
+        getContentPane().add(connect, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 150, 180, 30));
 
         jLabel1.setBackground(new java.awt.Color(222, 222, 222));
         jLabel1.setForeground(new java.awt.Color(42, 60, 51));
@@ -84,11 +75,6 @@ public class ConnectView extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
-    private void cancelConnectionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelConnectionActionPerformed
-        // TODO add your handling code here:
-        
-    }//GEN-LAST:event_cancelConnectionActionPerformed
 
     /**
      * @param args the command line arguments
@@ -138,24 +124,25 @@ public class ConnectView extends javax.swing.JFrame {
      * A function that returns the host port textfield
      * @return JTextField port
      */
-    public JTextField getPort(){
+    public JTextField getConnectPort(){
         return port;
     }
     
     /**
-     * A function that returns the host connection Name textfield
-     * @return JTextField connectionName
+     * A function that returns the host port textfield
+     * @return JTextField port
      */
-    public JTextField getConnectionName(){
-        return connectionName;
+    public JTextField getOpenPort(){
+            return portToListenTo;
     }
     
+  
     /**
      * This function returns a button to be used to create a new connection
      * @return JButton newConnection
      */
-    public JButton newConnection(){
-        return newConnection;
+    public JButton startServerBtn(){
+        return listenBtn;
     }
     
     /**
@@ -166,23 +153,15 @@ public class ConnectView extends javax.swing.JFrame {
         return connect;
     }
     
-    /**
-     * This function returns a button to cancel the page
-     * @return JButton connect
-     */
-    public JButton cancel(){
-        return cancelConnection;
-    }
-    
+   
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton cancelConnection;
     private javax.swing.JButton connect;
-    private javax.swing.JTextField connectionName;
     private javax.swing.JTextField hostIp;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JButton newConnection;
+    private javax.swing.JButton listenBtn;
     private javax.swing.JTextField port;
+    private javax.swing.JTextField portToListenTo;
     // End of variables declaration//GEN-END:variables
 }

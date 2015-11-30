@@ -11,6 +11,8 @@ import java.awt.event.MouseListener;
 import serviceactivation.models.Models;
 import serviceactivation.views.ConnectView;
 import serviceactivation.views.MainView;
+import javax.swing.JDialog;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -46,51 +48,58 @@ public class MainController {
             @Override
             public void mouseClicked(MouseEvent e) {
                 if(e.getSource() == mv.serviceOneStart()){
-                    System.out.println(m.connect());
                     //do something
                     //Starting the audio service
-                    m.startService1();
+                    //m.startService1();
+                    m.sendCommand("startAudio");
                     mv.labelOne().setBackground(Color.green);
                 }else if(e.getSource() == mv.serviceOneStop()){
                     //do something
                     //Stoping the audio service
-                    m.stopService1();
+                    //m.stopService1();
+                    m.sendCommand("stopAudio");
                     mv.labelOne().setBackground(Color.red);
                 }else if(e.getSource() == mv.serviceOneLog()){
                     //do something
                 }else if(e.getSource() == mv.serviceTwoStart()){
                     //do something
                     //Starting the firewall service
-                    m.startService2();
+                    //m.startService2();
+                    m.sendCommand("startWifi");
                     mv.labelTwo().setBackground(Color.green);
                 }else if(e.getSource() == mv.serviceTwoStop()){
                     //do something
                     //Stoping the firewall service
-                    m.stopService2();
+                    m.sendCommand("stopWifi");
+                    //m.stopService2();
                     mv.labelTwo().setBackground(Color.red);
                 }else if(e.getSource() == mv.serviceTwoLog()){
                     //do something
                 }else if(e.getSource() == mv.serviceThreeStart()){
                     //do something
                     //Starting the wifi service
-                    m.startService3();
+                    //m.startService3();
+                    m.sendCommand("startFirewall");
                     mv.labelThree().setBackground(Color.green);
                 }else if(e.getSource() == mv.serviceThreeStop()){
                     //do something
                     //Stoping the wifi service
-                    m.stopService3();
+                    //m.stopService3();
+                    m.sendCommand("stopFirewall");
                     mv.labelThree().setBackground(Color.red);
                 }else if(e.getSource() == mv.serviceThreeLog()){
                     //do something
                 }else if(e.getSource() == mv.serviceFourStart()){
                     //do something
                     //Start the windows update seervice
-                    m.startService4();
+                    //m.startService4();
+                    m.sendCommand("startWindowsUpdate");
                     mv.labelFour().setBackground(Color.green);
                 }else if(e.getSource() == mv.serviceFourStop()){
                     //do something
                     //Stoping the windows update service
-                    m.stopService4();
+                    //m.stopService4();
+                    m.sendCommand("stopWindowsUpdate");
                     mv.labelFour().setBackground(Color.red);
                 }else if(e.getSource() == mv.serviceFourLog()){
                     System.out.println("Explanation");
@@ -106,14 +115,37 @@ public class MainController {
                 }else if(e.getSource() == mv.newConnectionBtn()){
                     //do something
                     cv.setVisible(true);
-        /**/    }else if(e.getSource() == cv.newConnection()){
-                    //do something
-                }else if(e.getSource() == cv.connectButton()){
-                    mv.setVisible(true);
-                    cv.dispose();
-                }else if(e.getSource() == cv.cancel()){
-                    //do something
-                    cv.dispose();
+        /**/    }
+                /**
+                 * This function starts a server for others to listen to it
+                 */
+                else if(e.getSource() == cv.startServerBtn()){
+                    if(m.startServer(Integer.parseInt(cv.getOpenPort().getText()))){
+                        JOptionPane.showMessageDialog(cv, "Successfully Created A Network", "Remote Connection", 1);
+                    }else{
+                        JOptionPane.showMessageDialog(cv, "Failed to create a service", "Remote Connection", 1);
+                    }
+                }
+                /**
+                 * This part of the code allows the client to control the services of a server
+                 */
+                else if(e.getSource() == cv.connectButton()){
+                    String remoteIp = cv.getIp().getText();
+                    int remotePort;
+                    if(cv.getConnectPort().getText().equals("")){
+                        JOptionPane.showMessageDialog(cv, "Please Enter A Port Number", "Error", 1);
+                    }else{
+                        remotePort = Integer.parseInt(cv.getConnectPort().getText());
+                        if(m.connectToRemote(remoteIp,remotePort)){
+                            JOptionPane.showMessageDialog(cv, "Successfully Connected", "Connected to Remote PC", 1);
+                            mv.setVisible(true);
+                            cv.dispose();
+                        }else{
+                            JOptionPane.showConfirmDialog(cv, "Failed to Connect Please Try Again", "Failed", 1);
+                        }
+                    }
+                    
+                    
                 }
                 
             }
@@ -161,9 +193,8 @@ public class MainController {
         mv.newConnectionBtn().addMouseListener(mouseListener);
         
         /** adding mouselisteners to elements in connect view **/
-        cv.newConnection().addMouseListener(mouseListener);
+        cv.startServerBtn().addMouseListener(mouseListener);
         cv.connectButton().addMouseListener(mouseListener);
-        cv.cancel().addMouseListener(mouseListener);
         
         
     }
