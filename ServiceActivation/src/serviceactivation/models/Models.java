@@ -24,6 +24,7 @@ public class Models {
     Socket sock;
     PrintWriter pout;
     int port;
+    String cmd = "waiting";
     /**
      * A function to connect to a remote pc
      * @param hostIp
@@ -56,23 +57,61 @@ public class Models {
      */
    public boolean startServer(int port){
         boolean status = false;
-        try {
-            ServerSocket serverSock = new ServerSocket(port);
-            while(true){
-                status = true;
-                Socket client = serverSock.accept();
-                PrintWriter pw = new 
-                    PrintWriter(client.getOutputStream(),true);
-                    pw.println(new java.util.Date().toString());
-            }
+       try {
+      ServerSocket sock = new ServerSocket(port);
+      
+      /* now listen for connections */
+      while (true) {
+        Socket client = sock.accept();
+        InputStream in = client.getInputStream();
+         BufferedReader bin = new
+        BufferedReader(new InputStreamReader(in));
+      
+      /* read the date from the socket */
+      String line;
+      while ( (line = bin.readLine()) != null){
+        System.out.println(line);
+        cmd=line;
+      }
+      if(cmd.equals("startAudio")){
+        startService1();
+      }
+      else if(cmd.equals("stopAudio")){
+          stopService1();
+      }
+      else if(cmd.equals("startWifi")){
+          startService2();
+      }
+      else if(cmd.equals("stopWifi")){
+          stopService2();
+      }
+      else if(cmd.equals("startFirewall")){
+          startService3();
+      }
+      else if(cmd.equals("stopFirewall")){
+          stopService3();
+      }
+      else if(cmd.equals("startWindowsUpdate")){
+          startService4();
+      }
+      else if(cmd.equals("stopWindowUpdate")){
+          stopService4();
+      }
+      else{
+          System.err.print("Error!");
+      }
+   
+      /* close the socket and resume */
+      /* listening for connections */
+      client.close();
+      }
+    }
+    catch (IOException ioe) {
+      System.err.println(ioe);
+    }
            /**
             * TODO actions 
-            */ 
-           
-            
-        } catch (IOException ex) {
-            System.out.println(ex);
-        }
+            */
         return status;
     }
    
